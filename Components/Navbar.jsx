@@ -1,11 +1,12 @@
 import { Feather } from "@expo/vector-icons";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
 export default function Navbar() {
   const [themeIcon, setThemeIcon] = useState(false);
   return (
-    <View className="w-full bg-l-secondary min-h-16  flex-row absolute top-0  justify-between items-center px-4">
+    <View className="w-full  bg-l-secondary min-h-16  flex-row absolute top-0  justify-between items-center px-4">
       <View className="flex-row items-center gap-5">
         <Text className="bg-accent text-white text-2xl py-1.5 px-3 rounded-lg">
           A
@@ -23,6 +24,7 @@ export default function Navbar() {
         <TouchableOpacity
           onPress={() => {
             setThemeIcon(!themeIcon);
+            router.push('../Auth')
           }}
           className="p-2 bg-l-border rounded-xl"
         >

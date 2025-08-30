@@ -5,23 +5,23 @@ import React, { useEffect } from "react";
 import {
   FlatList,
   ImageBackground,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   Text,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Navbar from "../../Components/Navbar";
 import "../globals.css";
 
 export default function Index() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   useEffect(() => {
-    // Perform any necessary side effects here
     setTimeout(() => {
-      router.push("/(tabs)/favs");
+      router.push("../Auth");
     }, 1000);
   }, []);
+
   return (
     <SafeAreaView className="flex-1  relative items-center justify-center bg-l-primary">
       <StatusBar barStyle="default" hidden={false} />

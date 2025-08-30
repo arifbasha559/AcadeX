@@ -1,7 +1,7 @@
 import Navbar from "@/Components/Navbar";
 import { AntDesign, Feather } from "@expo/vector-icons";
-import { FlatList, SafeAreaView, ScrollView, StatusBar, Text, View } from "react-native";
-
+import { FlatList, ScrollView, StatusBar, Text, View } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 const Semester = () => {
   return (
     <View className="w-full mt-5 bg-l-secondary p-4  flex-row justify-between shadow-lg shadow-accent items-center rounded-lg  gap-3">
@@ -27,7 +27,6 @@ export default function semesters() {
   const sems = [1, 2, 3, 4, 5, 6];
   return (
     <SafeAreaView className="flex-1  relative items-center justify-center bg-l-primary">
-      <StatusBar barStyle="default" hidden={false} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <Navbar />
         <View className="flex-1 items-center top-16 ">
