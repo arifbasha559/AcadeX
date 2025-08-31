@@ -1,5 +1,6 @@
 import { Feather } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { View } from "react-native";
 // import "./globals.css"
 
 export default function RootLayout() {
@@ -10,13 +11,13 @@ export default function RootLayout() {
           height: 100,
           width: 100,
           justifyContent: "center",
-          backgroundColor: "#fff",
           alignItems: "center",
         },
         tabBarStyle: {
           position: "absolute",
-          overflow: "hidden",
+          // overflow: "hidden",
           borderWidth: 1,
+          backgroundColor: "#fff", // Set background only for the tab bar
         },
       }}
     >
@@ -41,6 +42,23 @@ export default function RootLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="upload"
+        options={{
+          headerShown: false,
+          tabBarLabel: () => null,
+          // title: "Upload",
+          tabBarIcon: ({ focused }) => (
+            <View
+              className={`  ${"bg-accent"}  rounded-full  h-16 w-16  items-center justify-center  -mt-6  shadow-lg
+        `}
+            >
+              <Feather name="plus" size={32} color="#fff" />
+            </View>
+          ),
+        }}
+      />
+
       <Tabs.Screen
         name="favs"
         options={{

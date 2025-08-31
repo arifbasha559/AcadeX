@@ -1,7 +1,6 @@
-import userImage from "@/assets/images/background.png";
 import Navbar from "@/Components/Navbar";
 import { Feather } from "@expo/vector-icons";
-import { Image, ScrollView, StatusBar, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function profile() {
@@ -19,10 +18,9 @@ export default function profile() {
             </View>
             <View className="w-[85%] bg-l-secondary p-4 shadow-lg shadow-accent rounded-lg mt-5">
               <View className="flex-row items-center gap-3">
-                <Image
-                  source={userImage}
-                  className="size-16 rounded-full overflow-hidden"
-                />
+                <View className='size-16 bg-accent ml-5 rounded-full justify-center items-center'> 
+                  <Feather name={"user"} size={32} className="" color='white' />
+                </View>
                 <View className="px-10">
                   <Text className="text-2xl font-bold mt-2 ">John Doe</Text>
                   <Text className="text-base font-extralight mt-2 ">
@@ -32,7 +30,7 @@ export default function profile() {
               </View>
               <View className="flex-row justify-around">
                 <View className="mt-4 size-[30vw] items-center rounded-lg bg-blue-500/10 justify-center">
-                  <Feather name="book-open" size={24} color="blue" />
+                  <Feather name="file-text" size={24} color="blue" />
                   <Text className="text-xl font-semibold mt-2">11</Text>
                   <Text className="text-lg font-light">Total Files.</Text>
                 </View>
@@ -48,9 +46,8 @@ export default function profile() {
             </Text>
             <View className="w-[85%] bg-l-secondary p-4 shadow-lg shadow-accent rounded-lg my-5">
               <View className="flex-row items-center gap-3">
-                <Feather name='settings' size={16} color={"black"}/>
-                  <Text className="text-xl  ">App Settings</Text>
-                
+                <Feather name="settings" size={16} color={"black"} />
+                <Text className="text-xl  ">App Settings</Text>
               </View>
             </View>
           </View>

@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <View className="w-full  bg-l-secondary min-h-16  flex-row absolute top-0  justify-between items-center px-4">
       <View className="flex-row items-center gap-5">
-        <Text className="bg-accent text-white text-2xl py-1.5 px-3 rounded-lg">
+        <Text className="font-semibold bg-accent text-white text-2xl py-1.5 px-3 rounded-lg">
           A
         </Text>
         <Text className="text-accent text-2xl font-semibold">AcadeX</Text>

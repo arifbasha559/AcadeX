@@ -48,3 +48,22 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+
+
+# Update system
+sudo apt update && sudo apt upgrade -y
+
+# Install Node.js and npm
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install Java JDK
+sudo apt install -y openjdk-11-jdk
+
+# Install EAS CLI
+sudo npm install -g eas-cli
+
+
+eas build --platform android --local
